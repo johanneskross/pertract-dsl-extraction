@@ -1,0 +1,19 @@
+stages:
+  - build
+  - deploy
+
+build:
+  stage: build
+  script:
+    - mvn clean install -Psonar sonar:sonar
+    - mv target/bd.pmg.war bd.pmg.war
+  artifacts:
+    paths:
+    - bd.pmg.war
+    name: "fortiss_pmwt_bd.pmg"
+    
+deploy to plab:
+  stage: deploy
+  script:
+    - sh $HOME/deploy-bd.pmg.sh
+  environment: plab
