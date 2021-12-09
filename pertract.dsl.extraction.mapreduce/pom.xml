@@ -15,7 +15,7 @@
 	</organization>
 
 	<properties>
-		<jackson.version>2.5.3</jackson.version>
+		<jackson.version>2.9.10.8</jackson.version>
 		<jersey.version>1.19</jersey.version>
 		<maven.compiler.source>1.6</maven.compiler.source>
 		<maven.compiler.target>1.6</maven.compiler.target>
